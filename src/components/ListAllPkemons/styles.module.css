@@ -1,0 +1,17 @@
+.listAllCategories {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 1rem;
+	padding: 1rem;
+	border-radius: var(--border-radius);
+	background: rgba(var(--card-rgb), 0.1);
+	border: 1px solid rgba(var(--card-border-rgb), 0.15);
+}
+
+.groupItems {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 0.5rem;
+	max-height: 200px;
+	overflow: auto;
+}
