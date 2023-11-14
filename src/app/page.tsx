@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link'
-import { ListPokemons } from '@/components/ListAllPkemons'
+import { ListPokemons } from '@/components/ListAllPokemons'
 
 export default function Home() {
 	return (
