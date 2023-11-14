@@ -1,52 +1,23 @@
-// #region => Bank
-type BankMin = {
+// #region => Pokemon
+type Pokemon = {
+	abilities: []
+	base_experience: number
+	forms: []
+	game_indices: []
+	height: number
+	held_items: []
+	id: number
+	is_default: boolean
+	location_area_encounters: string
+	moves: []
 	name: string
-	codeFebraban: string
-	url: string
-	description: string
-	logo: string
-}
-// #endregion
-
-// #region => Category
-export type Category = {
-	id: string
-	name: string
-	path: string
-	icon: string
-	description: string
-	metaDescription: string
-	productTitle: string
-	productDescription: string
-	whatIsIcon: string
-	whatIsTitle: string
-	whatIsHatTag: string
-	whatIsDescription: string
-	whatIsImg: string
-	imgMain: string
-	createdAt: string
-	bank: BankMin[]
-	relatedLinks: RelatedLinks[]
-	questions: []
-	benefits: Benefits[]
-}
-// #endregion
-
-// #region => Utils
-type Benefits = {
-	icon: string
-	title: string
-	description: string
-}
-
-type RelatedLinks = {
-	id: string
-	productId: string
-	title: string
-	description: string
-	link: string
-	active: string
-	productSelected: string
-	categorySelected: string
+	order: boolean
+	past_abilities: []
+	past_types: []
+	species: {}
+	sprites: {}
+	stats: []
+	types: []
+	weight: number
 }
 // #endregion

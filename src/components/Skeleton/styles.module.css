@@ -1,0 +1,15 @@
+.skeleton {
+	display: block;
+	opacity: 0.6;
+	cursor: progress;
+	animation: skeleton-animation 1s linear infinite alternate;
+}
+
+@keyframes skeleton-animation {
+	0% {
+		background-color: #f2f2f2;
+	}
+	100% {
+		background-color: #cccccc;
+	}
+}

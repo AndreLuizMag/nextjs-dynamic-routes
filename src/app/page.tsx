@@ -23,29 +23,23 @@ export default function Home() {
 
 			<div className={styles.grid}>
 				<Link
-					href='/consignado'
+					href='/bulbasaur'
 					className={styles.card}
 					target='_blank'
 					rel='noopener noreferrer'>
 					<h2>
-						Categoria - Consignado <span>-&gt;</span>
+						Bulbasaur <span>-&gt;</span>
 					</h2>
-					<p>
-						<b>id:</b> 10 | <b>path:</b> consignado
-					</p>
 				</Link>
 
 				<Link
-					href='/consignado'
+					href='/charmander'
 					className={styles.card}
 					target='_blank'
 					rel='noopener noreferrer'>
 					<h2>
-						Produto - Consignado Federal <span>-&gt;</span>
+						Charmander <span>-&gt;</span>
 					</h2>
-					<p>
-						<b>id:</b> 15 | <b>path:</b> consignado-federal
-					</p>
 				</Link>
 			</div>
 		</main>

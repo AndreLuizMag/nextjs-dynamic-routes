@@ -1,6 +1,8 @@
 'use client'
 import PokeApiService from '@/services/pokeapi'
 import { useEffect, useState } from 'react'
+import styles from './styles.module.css'
+import { Skeleton } from '@/components/Skeleton'
 
 const Page = ({
 	params,
@@ -28,10 +30,30 @@ const Page = ({
 	}, [])
 
 	return (
-		<div>
+		<div className={styles.container}>
+			<h1>
+				Pokemon -{' '}
+				{data ? (
+					''
+				) : (
+					<Skeleton width='152px' height='40px' />
+				)}
+			</h1>
 			<p>
-				Post: {params.pokemon}
-				{JSON.stringify(data)}
+				<b>id:</b>{' '}
+				{data ? (
+					''
+				) : (
+					<Skeleton width='22px' height='20px' />
+				)}
+			</p>
+			<p>
+				<b>height:</b>{' '}
+				{data ? (
+					''
+				) : (
+					<Skeleton width='22px' height='20px' />
+				)}
 			</p>
 		</div>
 	)
