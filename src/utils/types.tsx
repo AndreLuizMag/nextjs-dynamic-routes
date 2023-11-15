@@ -1,5 +1,5 @@
 // #region => Pokemon
-type Pokemon = {
+export type Pokemon = {
 	abilities: []
 	base_experience: number
 	forms: []

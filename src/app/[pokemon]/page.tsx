@@ -1,40 +1,31 @@
-'use client'
+import type { Metadata } from 'next'
 import PokeApiService from '@/services/pokeapi'
-import { useEffect, useState } from 'react'
-import styles from './styles.module.css'
 import { Skeleton } from '@/components/Skeleton'
+import styles from './styles.module.css'
 
-const Page = ({
+export const metadata: Metadata = {
+	title: 'Pokemon',
+	description: 'Descrição',
+}
+
+const Page = async ({
 	params,
 }: {
 	params: { pokemon: string }
 }) => {
 	const pokeApiService = new PokeApiService()
+	const data = await pokeApiService.getPokemon(
+		params.pokemon
+	)
 
-	const [data, setData] = useState({})
-	let flag = false
-
-	const loadData = async () =>
-		setData(
-			await pokeApiService.getPokemon(
-				params.pokemon as string
-			)
-		)
-
-	useEffect(() => {
-		if (!flag) {
-			loadData()
-
-			flag = true
-		}
-	}, [])
+	metadata.title = data.name
 
 	return (
 		<div className={styles.container}>
 			<h1>
 				Pokemon -{' '}
 				{data ? (
-					''
+					data.name
 				) : (
 					<Skeleton width='152px' height='40px' />
 				)}
@@ -42,7 +33,7 @@ const Page = ({
 			<p>
 				<b>id:</b>{' '}
 				{data ? (
-					''
+					data.id
 				) : (
 					<Skeleton width='22px' height='20px' />
 				)}
@@ -50,7 +41,7 @@ const Page = ({
 			<p>
 				<b>height:</b>{' '}
 				{data ? (
-					''
+					data.height
 				) : (
 					<Skeleton width='22px' height='20px' />
 				)}
